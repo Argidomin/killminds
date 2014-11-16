@@ -7,7 +7,6 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
 use Symfony\Component\Validator\Constraints as Assert;
 
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**

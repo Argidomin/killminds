@@ -7,7 +7,7 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-    {% if web.webActiva == null %}
+    {% if web.webActivaAction == null %}
         {% block mantenimiento %}
                 {{ render(controller('AppBundle:Sitio:webMantenimiento')) }}
         {% endblock %}

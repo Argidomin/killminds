@@ -3,8 +3,7 @@
 namespace Argidomin\AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
 
 use Doctrine\ORM\EntityManager;
 
@@ -20,7 +19,7 @@ class WebController extends Controller
 
     }
 
-    public function getWebActiva()
+    public function getWebActivaAction()
     {
 
         return $this->em->getRepository('AppBundle:Web')
