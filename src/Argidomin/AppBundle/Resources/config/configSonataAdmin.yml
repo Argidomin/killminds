@@ -1,0 +1,11 @@
+services:
+    sonata.admin.post:
+        class: Argidomin\AppBundle\Admin\WebAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Web", label: "Datos de la web" }
+        arguments:
+            - ~
+            - Argidomin\AppBundle\Entity\Web
+            - ~
+        calls:
+            - [ setTranslationDomain, [ArgidominAppBundle]]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {% if web.webActiva == null %}
+        {% block mantenimiento %}
+                {{ render(controller('AppBundle:Sitio:webMantenimiento')) }}
+        {% endblock %}
+
+    {% else %}
+        {% block principal %} {% endblock %}
+    {% endif %}
+
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>
